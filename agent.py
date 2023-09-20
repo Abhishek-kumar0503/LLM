@@ -7,16 +7,10 @@ from langchain.llms import OpenAI
 llm = OpenAI(model_name="text-curie-001", temperature=0.7, openai_api_key="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")
 api = TodoistAPI("2226b61266e3ef2b6d28f92a34b893a4fa7bc7cd")
 
-# # Get user input for section name and task content
-# section_name = input("Enter the section name: ")
-# task_content = input("Enter the task content: ")
-
 input_string = input("Enter the input string: ")
 
-# Define a regular expression pattern to match section names, combined task names and values, and alarms
 pattern = r'"(.*?)"\s\+([\w\s]+)\s\-([\w\s]+)'
 
-# Find the first match in the input string
 match = re.search(pattern, input_string)
 
 if match:
@@ -27,7 +21,6 @@ if match:
 else:
     print("No valid pattern found in the input string.")
 
-# Load langchain tools
 tool_names = ["llm-math"]
 tools = load_tools(tool_names, llm=llm)
 
@@ -51,11 +44,18 @@ try:
         print("Section updated:", updated_section)
 
     result = llm.generate([f"Create a task to {task_content}"])
-    print(result)
-    # task_content = result.choices[0].text.strip()  # Extract the generated content from LLMResult
+    result_str = str(result)
+    print(result_str)
+    generated_text = result_str.split("text='")[1].split("'")[0]
+    generated = generated_text.replace('\n\n', '')
+
+    print(generated)
+    # Extract the generated content by joining the tokens
+    # generated_content = result[0].text.strip() 
+
     # Add a task within the specified section
     task = api.add_task(
-        content=task_content,
+        content=task_content,  # Use the generated content as the task content
         project_id=project_id,
         section_id=section_id,
         due_string=alarm,
@@ -63,5 +63,16 @@ try:
         priority=4,
     )
     print("Task added to the 'what list' section in Todoist:", task)
+
+    subtask = api.add_task(
+        content=generated,
+        project_id=project_id,
+        parent_id=task.id,  
+        due_string=alarm,  
+        due_lang='en',
+        priority=4,
+    )
+    print("Subtask added to the task:", subtask)
+
 except Exception as error:
     print("Error:", error)
