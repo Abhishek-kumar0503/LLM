@@ -45,13 +45,18 @@ try:
 
     result = llm.generate([f"Create a task to {task_content}"])
     result_str = str(result)
-    print(result_str)
-    generated_text = result_str.split("text='")[1].split("'")[0]
-    generated = generated_text.replace('\n\n', '')
+    
+    generated_match = re.search(r"text='(.*?)'", result_str)
+    if generated_match:
+        generated_text = generated_match.group(1)
+    else:
+        generated_text = "No generated text found."
 
-    print(generated)
-    # Extract the generated content by joining the tokens
-    # generated_content = result[0].text.strip() 
+    formatted_generated_text = generated_text.replace("\\n", "\n")
+
+    lines = formatted_generated_text.strip().split("\n")
+    formatted_text = "\n".join([line.strip() for line in lines])
+    # formatted_text = "\n".join([f"{i}. {line.strip()}" for i, line in enumerate(lines)])
 
     # Add a task within the specified section
     task = api.add_task(
@@ -65,7 +70,7 @@ try:
     print("Task added to the 'what list' section in Todoist:", task)
 
     subtask = api.add_task(
-        content=generated,
+        content=formatted_text,
         project_id=project_id,
         parent_id=task.id,  
         due_string=alarm,  
