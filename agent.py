@@ -3,9 +3,10 @@ import re
 from todoist_api_python.api import TodoistAPI
 from langchain.agents import load_tools
 from langchain.llms import OpenAI
+from key import OPENAI_API_KEY, TODO_KEY
 
-llm = OpenAI(model_name="text-curie-001", temperature=0.7, openai_api_key="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")
-api = TodoistAPI("2226b61266e3ef2b6d28f92a34b893a4fa7bc7cd")
+llm = OpenAI(model_name="text-curie-001", temperature=0.7, openai_api_key=OPENAI_API_KEY)
+api = TodoistAPI(TODO_KEY)
 
 input_string = input("Enter the input string: ")
 
