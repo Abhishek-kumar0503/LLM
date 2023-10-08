@@ -3,7 +3,7 @@ Here I create bot which perform task intoist with using LLM agent and Openai
 
 * install requirement if not installed
   ```sh
-  pip install requirements.txt
+  pip install -r requirements.txt
   ```  
 
 * To run the code
