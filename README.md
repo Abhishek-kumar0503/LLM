@@ -10,7 +10,21 @@ Here I create bot which where i give input cammand in vscode terminal it will  p
 
 <br>
 
-## Features
+## Set-up
+> To get started...
+
+### Step 1
+
+- 🍴 Fork this repo!
+
+### Step 2
+
+- 👯 Clone this repo to your local machine.
+  ```sh
+  git clone https://github.com/Abhishek-kumar0503/LLM.git
+  ```
+
+### Step 3
 
 * install requirement if not installed
   ```sh
@@ -21,3 +35,7 @@ Here I create bot which where i give input cammand in vscode terminal it will  p
   ```sh
   python agent.py
   ``` 
+
+<br>
+
+## Features
