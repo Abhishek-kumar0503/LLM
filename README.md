@@ -41,7 +41,7 @@ https://drive.google.com/file/d/1Mq-83bvvmYoWMMRoT3kV2AU9VgfciHV8/view?usp=shari
 
 ** input in message
 ```sh
-"<project_name>" + <which task do you want perform> - <set_alarm>
+"<project_name>" + <task_name> - <set_alarm>
 ```
 <br>
 
