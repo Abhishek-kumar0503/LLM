@@ -1,4 +1,4 @@
-<img src="(https://github.com/Abhishek-kumar0503/LLM/assets/97353002/1510a13f-3bb0-462a-9378-3a6611b8c23b)" align="right" height="200" width="200"/>
+<img src="https://github.com/Abhishek-kumar0503/LLM/assets/97353002/1510a13f-3bb0-462a-9378-3a6611b8c23b" align="right" height="200" width="200"/>
 
 # LLM
 Here create chat bot which where i give text as a input and it will automatically update project and task in todoist with using LLM agent and Openai
