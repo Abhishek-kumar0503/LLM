@@ -1,7 +1,7 @@
-<img src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" align="right" height="200" width="200"/>
+<img src="![video1](https://github.com/Abhishek-kumar0503/LLM/assets/97353002/1510a13f-3bb0-462a-9378-3a6611b8c23b)" align="right" height="200" width="200"/>
 
 # LLM
-Here I create bot which where i give input cammand in vscode terminal it will  perform task in todoist with using LLM agent and Openai
+Here create chat bot which where i give text as a input and it will automatically update project and task in todoist with using LLM agent and Openai
 
 <br><br>
 
