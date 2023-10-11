@@ -6,7 +6,9 @@ Here I create bot which where i give input cammand in vscode terminal it will  p
 <br><br>
 
 ## Video
-
+  ```sh
+https://drive.google.com/file/d/1Mq-83bvvmYoWMMRoT3kV2AU9VgfciHV8/view?usp=sharing
+```
 
 <br>
 
