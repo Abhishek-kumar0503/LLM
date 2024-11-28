@@ -46,7 +46,7 @@ https://drive.google.com/file/d/1Mq-83bvvmYoWMMRoT3kV2AU9VgfciHV8/view?usp=shari
 <br>
 
 ## Features
-![4](https://github.com/Abhishek-kumar0503/LLM/assets/97353002/65b46f44-c1c8-46e4-91e6-b70d10f99edf)
+![4](![image](https://github.com/user-attachments/assets/67992db2-c3e9-4d7e-89bd-6e565127ec05))
 
 - You directly send a message in form of text and it will automatically update in dotoist.
 - Also you create and update same project name task.
