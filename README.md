@@ -5,10 +5,10 @@ Here create chat bot which where i give text as a input and it will automaticall
 
 <br><br>
 
-## Video
-  ```sh
-https://drive.google.com/file/d/1Mq-83bvvmYoWMMRoT3kV2AU9VgfciHV8/view?usp=sharing
-```
+// ## Video
+//  ```sh
+//https://drive.google.com/file/d/1Mq-83bvvmYoWMMRoT3kV2AU9VgfciHV8/view?usp=sharing
+//```
 
 <br>
 
